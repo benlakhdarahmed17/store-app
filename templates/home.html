@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1 style="text-align: center;">Welcome to Flask Store!</h1>
+
+<h2 style="text-align: left;">List of available product categories:</h2>
+<ul>
+    <li><a href="{{url_for('show_products', category='Home')}}">Home equipement</a></li>
+    <li><a href="{{url_for('show_products', category='Food')}}">Food supplies</a></li>
+    <li><a href="{{url_for('show_products', category='Gym')}}">Gym equipement</a></li>
+    <li><a href="{{url_for('show_products', category='Clothes')}}">Clothes</a></li>
+</ul>
+
+{% endblock %}

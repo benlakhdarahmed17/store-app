@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1 style="text-align: center;">{{category_name}}</h1>
+
+<ol>
+    {% for product in products %}
+    <a href="{{url_for('show_product_details', productname = product.name)}}">
+        <li>{{ product.name }}</li>
+    </a>
+    {% endfor %}
+</ol>
+
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2>{{ product.name }}</h2>
+
+<img src="{{url_for('static', filename = product.image )}}" align="left" />
+
+<ul>
+    <li>remains in stock : {{ product.quantity }}</li>
+    <li>{{ product.description }}</li>
+</ul>
+
+{% endblock %}
