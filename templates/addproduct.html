@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form method ='POST', action="", enctype=multipart/form-data>
+    {{ form.hidden_tag() }}
+    <table>
+        <tr>
+            <td>{{ form.name.label }}</td>
+            <td>{{ form.name }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.quantity.label }}</td>
+            <td>{{ form.quantity }}</td>
+        </tr>   
+        <tr>
+            <td>{{ form.description.label }}</td>
+            <td>{{ form.description }}</td>
+        </tr> 
+        <tr>
+            <td>{{ form.image.label }}</td>
+            <td>{{ form.image }}</td>
+            <td>{{ form.submit }}</td>
+        </tr>              
+    </table>
+</form>
+
+{% endblock %}
