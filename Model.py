@@ -1,14 +1,10 @@
+from app import db
 
-
-from email.mime import image
-
-
-class Product:
-
-    def __init__(self, name, quantity, category, description, image):
-        self.name = name
-        self.quantity = int(quantity)
-        self.category = category
-        self.description = description
-        self.image = image
-        self.cart = False
+class Item(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False, unique=True)
+    quantity = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Integer, nullable=False)
+    category = db.Column(db.String(50), nullable=False)
+    description = db.Column(db.String(500), nullable=False)
+    filename = db.Column(db.String(50), nullable=False)
